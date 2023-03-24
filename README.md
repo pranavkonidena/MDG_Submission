@@ -5,13 +5,9 @@ Steps to set-up the project:
 3. Run the following in the terminal in the working directory.
 ```
 npm install
-
-```
-```
-
 sudo npm install -g
-
 ```
+
 
 4. Now open the terminal in any directory and write pgen to get started.
 
