@@ -16,7 +16,7 @@ const options = yargs
     
       .option('length' , {description: "If the type is " +colors.underline.bgRed("netr") +" , this sets the length of the password"})
       .option('en' , {description: "If the type is " +colors.underline.bgRed("netr") +" , this option when set to true, generates a password free from numbers"})
-      .option('esc' , {description: "If the type is "+colors.underline.bgRed("netr") +"this generates a password free from special characters when set to true."})
+      .option('esc' , {description: "If the type is "+colors.underline.bgRed("netr") +" , this generates a password free from special characters when set to true."})
 
 
      
