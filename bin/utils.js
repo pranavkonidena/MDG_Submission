@@ -3,7 +3,7 @@ const index = require('./index.js')
 const colors = require('colors');
 colors.enable()
 const pwEtr = () => {
-    switch (index.kind) {
+    switch (index.kind) { // Switch cases for calling diff kind sof keywords in password based on user input in CLI.
       case "i":
         
         request.get({
@@ -165,6 +165,7 @@ const pwEtr = () => {
 
 const pwNetr = () => {
   
+    // Code for random password generator, importing the length, en , esc parameters from index.js file
 
     request.get({
         url: "https://api.api-ninjas.com/v1/passwordgenerator?length="+index.length+"&exclude_numbers="+index.exclude_numbers+"&exclude_special_chars="+index.exclude_special_chars,
@@ -172,13 +173,13 @@ const pwNetr = () => {
           'X-Api-Key': '364b25SGTA0S7WnRdpNvPA==TE7DrbB3lv6YjT1u'
         },
       }, function(error, response, body) {
-        if(error)  console.log('Request failed, Our server is a bit busy right now. Please retry');
+        if(error)  console.log('Request failed, Our server is a bit busy right now. Please retry'); // May give error sometimes due to slow internet.
         else if(response.statusCode != 200)  console.log('Please try again , our servers encountered an error');
         
         else {
 
-        password = body.slice(21,-2)
-        console.log(colors.italic(colors.yellow("A random password for you is: \n")) +  colors.green(password));
+        password = body.slice(21,-2) 
+        console.log(colors.italic(colors.yellow("A random password for you is: \n")) +  colors.green(password)); 
         }
         
       });
