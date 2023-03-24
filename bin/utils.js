@@ -164,6 +164,8 @@ const pwEtr = () => {
 
 
 const pwNetr = () => {
+  
+
     request.get({
         url: "https://api.api-ninjas.com/v1/passwordgenerator?length="+index.length+"&exclude_numbers="+index.exclude_numbers+"&exclude_special_chars="+index.exclude_special_chars,
         headers: {
