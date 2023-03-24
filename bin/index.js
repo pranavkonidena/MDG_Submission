@@ -1,11 +1,11 @@
 #! /usr/bin/env node
 const yargs = require('yargs')
-const request = require('request')
-const { pwEtr , pwNetr} = require('./utils.js')
-const colors = require('colors');
-colors.enable()
+const request = require('request') // Allows to request data using api
+const { pwEtr , pwNetr} = require('./utils.js') // Getting functions from another file to increase code modularity
+const colors = require('colors'); // Allows display of colored output in terminal
+colors.enable() 
 
-
+// Code for help section of CLI
 const usage = colors.bold("                 *********************** \n")+ colors.yellow(("\n List of commands \n")) + colors.red(" Usage: pgen --type <type> --options<option-value>");
 const options = yargs  
       .usage(usage)                                                                  
@@ -22,11 +22,12 @@ const options = yargs
      
       .argv
       
-
+// When user chooses etr, the "kind" of the keywords he/she wishes to use are given and the function is called which fetches the password.
 if(yargs.argv.type == "etr"){
     module.exports.kind = yargs.argv.kind
     pwEtr()
 }
+// Code for when the user tries to generate a password randomly
 else if(yargs.argv.type == "netr"){
     let length = yargs.argv.length;
     let exclude_numbers = yargs.argv.en;
@@ -37,6 +38,7 @@ else if(yargs.argv.type == "netr"){
 
     pwNetr()
 }
+// If no argument is given, user is asked to enter pgen --help so that all commands and instructions may be shown
 else{
    console.log("Enter pgen --help for more details.")
 }
