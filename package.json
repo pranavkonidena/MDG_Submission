@@ -1,0 +1,23 @@
+{
+  "name": "cli_mdg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "pgen": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^7.0.2",
+    "chalk": "^5.2.0",
+    "colors": "^1.4.0",
+    "commander": "^10.0.0",
+    "request": "^2.88.2",
+    "yargs": "^17.7.1"
+  }
+}
